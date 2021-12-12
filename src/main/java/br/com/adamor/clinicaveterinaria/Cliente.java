@@ -2,7 +2,7 @@ package br.com.adamor.clinicaveterinaria;
 
 public class Cliente {
     
-    private int id;
+    final private int id;
     private String nome;
     private String endereco;
     private String telefone;
