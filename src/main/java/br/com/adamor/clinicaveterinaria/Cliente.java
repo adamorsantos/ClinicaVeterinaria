@@ -1,5 +1,8 @@
 package br.com.adamor.clinicaveterinaria;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
     
     final private int id;
@@ -8,6 +11,8 @@ public class Cliente {
     private String telefone;
     private String cep;
     private String email;
+    
+    private List<Animal> animais;
 
     public Cliente(int id, String nome, String endereco, String telefone, String cep, String email) {
         this.id = id;
@@ -16,6 +21,7 @@ public class Cliente {
         this.telefone = telefone;
         this.cep = cep;
         this.email = email;
+        this.animais = ArrayList<Animal>();
     }
     
     public int getId() {
@@ -62,6 +68,13 @@ public class Cliente {
         this.email = email;
     }
     
+    public void addAnimal(Animal animal){
+        animais.add(animal);
+    }
+    
+    public List<Animal> getAnimais(){
+        return animais;
+    }
 
     @Override
     public String toString() {

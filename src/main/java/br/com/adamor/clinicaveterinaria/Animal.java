@@ -42,6 +42,10 @@ public class Animal {
         this.sexo = sexo;
     }
 
-       
+    @Override
+    public String toString() {
+        return "Animal{" + "nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + '}';
+    }
+  
     
 }
